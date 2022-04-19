@@ -4,6 +4,30 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "admin/quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "admin/quickstart.html",
+          "hash": "oBVpgEn81fdgTEzcL+m0ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "admin/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "admin/toc.html",
+          "hash": "s2PcylzA+hNYIr5utyNO1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -24,7 +48,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "AUG1w/CVgbT2+4X5A0i+mg=="
+          "hash": "W6P9Smnlqn6XNnsnsIsQ+g=="
         }
       },
       "is_incremental": false,
@@ -69,7 +93,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 2,
+          "total_file_count": 3,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
