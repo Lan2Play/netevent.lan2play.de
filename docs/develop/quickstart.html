@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Developers quick start Guide! </title>
+    <title>Developers quickstart guide! </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Developers quick start Guide! ">
+    <meta name="title" content="Developers quickstart guide! ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -91,15 +91,15 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="developers-quick-start-guide">Developers quick start Guide!</h1>
+<h1 id="developers-quickstart-guide">Developers quickstart guide!</h1>
 
-<p>Download and Install .Net6 SDK <a href="https://dotnet.microsoft.com/download/dotnet/6.0">https://dotnet.microsoft.com/download/dotnet/6.0</a></p>
-<p>Install EntityFramework 
-<code>dotnet tool install --global dotnet-ef</code></p>
-<p>Switch into NetEvent\Server folder</p>
-<p>Create DB
-<code>dotnet ef database update</code></p>
-<h1 id="create-migrations-for-the-database">create migrations for the Database</h1>
+<ul>
+<li>Download and install .Net6 SDK <a href="https://dotnet.microsoft.com/download/dotnet/6.0">https://dotnet.microsoft.com/download/dotnet/6.0</a></li>
+<li>Clone the repository <a href="https://github.com/Lan2Play/NetEvent.git">https://github.com/Lan2Play/NetEvent.git</a></li>
+<li>Install EntityFramework with <code>dotnet tool install --global dotnet-ef</code></li>
+<li>Switch into the <code>NetEvent\NetEvent\Server</code> folder and create the database with <code>dotnet ef database update</code></li>
+</ul>
+<h1 id="create-new-migrations-for-the-database">create new migrations for the database</h1>
 <p>Switch into the repository and execute </p>
 <h2 id="with-make">with make</h2>
 <p><code>make migration name=MigrationName</code></p>
