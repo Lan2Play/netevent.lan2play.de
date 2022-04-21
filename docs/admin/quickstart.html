@@ -93,7 +93,7 @@
                     <article class="content wrap" id="_content" data-uid="">
 <h1 id="admins-quickstart-guide">Admins quickstart guide!</h1>
 
-<h2 id="running-netevent">Running NetEvent</h2>
+<h2 id="running-netevent-with-docker">Running NetEvent with docker</h2>
 <h3 id="prerequirements">Prerequirements</h3>
 <ul>
 <li><a href="https://docs.docker.com/get-docker/">Docker</a></li>
@@ -106,6 +106,12 @@
 <li>copy <code>.env.example</code> to <code>.env</code> and edit at least the <code>DBUser</code> and <code>DBPassword</code> values. Attention: DBPort does not change the port of the postgres instance that is configured by default in the compose file!</li>
 <li>run <code>docker-compose up -d</code></li>
 <li>visit your NetEvent installation with your browser, login with Admin and Test123.. and configure your instance</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>You can find the container image on <a href="https://hub.docker.com/r/lan2play/netevent">Docker Hub</a></li>
+<li>You can find the <code>Dockerfile</code> inside the root of our github repository and build it yourself</li>
+<li>The container is intended to be running behind any kind of reverse proxy and therfore it is started with http only</li>
 </ul>
 </article>
               
