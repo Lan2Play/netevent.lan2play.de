@@ -100,9 +100,12 @@
 <p>Create DB
 <code>dotnet ef database update</code></p>
 <h1 id="create-migrations-for-the-database">create migrations for the Database</h1>
-<p>Switch into NetEvent\Server folder</p>
-<p><code>dotnet ef migrations add InitialCreate --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql</code>
-<code>dotnet ef migrations add InitialCreate --context SqliteApplicationDbContext --output-dir Migrations/Sqlite</code></p>
+<p>Switch into the repository and execute </p>
+<h2 id="with-make">with make</h2>
+<p><code>make migration name=MigrationName</code></p>
+<h2 id="without-make">without make</h2>
+<p><code>dotnet ef migrations add MigrationName --project NetEvent/Server --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql</code></p>
+<p><code>dotnet ef migrations add MigrationName --project NetEvent/Server --context SqliteApplicationDbContext --output-dir Migrations/Sqlite</code></p>
 </article>
               
                 </div>
