@@ -99,6 +99,10 @@
 <p>Switch into NetEvent\Server folder</p>
 <p>Create DB
 <code>dotnet ef database update</code></p>
+<h1 id="create-migrations-for-the-database">create migrations for the Database</h1>
+<p>Switch into NetEvent\Server folder</p>
+<p><code>dotnet ef migrations add InitialCreate --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql</code>
+<code>dotnet ef migrations add InitialCreate --context SqliteApplicationDbContext --output-dir Migrations/Sqlite</code></p>
 </article>
               
                 </div>
