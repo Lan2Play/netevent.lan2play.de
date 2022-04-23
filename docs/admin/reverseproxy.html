@@ -6,9 +6,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Admins quickstart guide! </title>
+    <title>Example reverseproxy configs </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Admins quickstart guide! ">
+    <meta name="title" content="Example reverseproxy configs ">
     <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -91,27 +91,12 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="admins-quickstart-guide">Admins quickstart guide!</h1>
+<h1 id="example-reverseproxy-configs">Example reverseproxy configs</h1>
 
-<h2 id="running-netevent-with-docker">Running NetEvent with docker</h2>
-<h3 id="prerequirements">Prerequirements</h3>
-<ul>
-<li><a href="https://docs.docker.com/get-docker/">Docker</a></li>
-<li><a href="https://docs.docker.com/compose/install/">Docker-compose</a></li>
-</ul>
-<h3 id="installation">Installation</h3>
-<ul>
-<li>Download or clone this repository (or the docker-compose.yml and the .env.example)</li>
-<li>copy <code>.env.example</code> to <code>.env</code> and edit at least the <code>DBUser</code> and <code>DBPassword</code> values. If you want to use a different port than 5000/tcp, change <code>APPPort</code>. Attention: DBPort does not change the port of the postgres instance that is deployed by default in the compose file!</li>
-<li>run <code>docker-compose up -d</code></li>
-<li>visit your NetEvent installation with your browser, login with Admin and Test123.. and configure your instance</li>
-</ul>
-<h3 id="notes">Notes</h3>
-<ul>
-<li>This container is intended to be running behind any kind of reverse proxy and therfore it is started with http only. If you need help for this, take a look in the <a href="admin/reverseproxy.html">example reverseproxy configs</a>. </li>
-<li>You can find the container image on <a href="https://hub.docker.com/r/lan2play/netevent">Docker Hub</a></li>
-<li>You can find the <code>Dockerfile</code> inside the root of our github repository and build it yourself</li>
-</ul>
+<h2 id="nginx">Nginx</h2>
+<p>tbd</p>
+<h2 id="apache">Apache</h2>
+<p>tbd</p>
 </article>
               
                 </div>
