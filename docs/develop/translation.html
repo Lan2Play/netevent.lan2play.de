@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developers quickstart guide &mdash; NetEvent 2.0 documentation</title>
+  <title>Translation / i18n &mdash; NetEvent 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CI / CD" href="cicd.html" />
-    <link rel="prev" title="Example reverseproxy configs" href="../admin/reverseproxy.html" /> 
+    <link rel="prev" title="CI / CD" href="cicd.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,17 +47,17 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers guide</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developers quickstart guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-new-migrations-for-the-database">create new migrations for the database</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#with-make">with make</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#without-make">without make</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#code-analysis">code analysis</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Developers quickstart guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cicd.html">CI / CD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="translation.html">Translation / i18n</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Translation / i18n</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-translation">Client Translation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#translation-status">translation status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translate-with-weblate">translate with weblate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translate-without-weblate">translate without weblate</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -75,9 +74,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Developers quickstart guide</li>
+      <li>Translation / i18n</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/develop/quickstart.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/develop/translation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -85,30 +84,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="developers-quickstart-guide">
-<h1>Developers quickstart guide<a class="headerlink" href="#developers-quickstart-guide" title="Permalink to this headline"></a></h1>
+  <section id="translation-i18n">
+<h1>Translation / i18n<a class="headerlink" href="#translation-i18n" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p>Download and install .Net6 SDK <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet/6.0">https://dotnet.microsoft.com/download/dotnet/6.0</a></p></li>
-<li><p>Clone the repository <a class="reference external" href="https://github.com/Lan2Play/NetEvent.git">https://github.com/Lan2Play/NetEvent.git</a></p></li>
-<li><p>Install EntityFramework with <cite>dotnet tool install –global dotnet-ef</cite></p></li>
-<li><p>Switch into the <cite>NetEventNetEventServer</cite> folder and create the database with <cite>dotnet ef database update</cite></p></li>
+<li><p>The client has i18n abillity</p></li>
+<li><p>The documentation will be in english only at the moment</p></li>
 </ul>
-<section id="create-new-migrations-for-the-database">
-<h2>create new migrations for the database<a class="headerlink" href="#create-new-migrations-for-the-database" title="Permalink to this headline"></a></h2>
-<p>Switch into the repository and execute</p>
-<section id="with-make">
-<h3>with make<a class="headerlink" href="#with-make" title="Permalink to this headline"></a></h3>
-<p><cite>make migration name=MigrationName</cite></p>
+<section id="client-translation">
+<h2>Client Translation<a class="headerlink" href="#client-translation" title="Permalink to this headline"></a></h2>
+<section id="translation-status">
+<h3>translation status<a class="headerlink" href="#translation-status" title="Permalink to this headline"></a></h3>
+<a class="reference external image-reference" href="https://translate.lan2play.de/engage/netevent-client/"><img alt="Translation status" src="https://translate.lan2play.de/widgets/netevent-client/-/netevent-client/multi-auto.svg" /></a>
 </section>
-<section id="without-make">
-<h3>without make<a class="headerlink" href="#without-make" title="Permalink to this headline"></a></h3>
-<p><cite>dotnet ef migrations add MigrationName –project NetEvent/Server –context PsqlApplicationDbContext –output-dir Migrations/Psql – –DBProvider psql</cite></p>
-<p><cite>dotnet ef migrations add MigrationName –project NetEvent/Server –context SqliteApplicationDbContext –output-dir Migrations/Sqlite</cite></p>
+<section id="translate-with-weblate">
+<h3>translate with weblate<a class="headerlink" href="#translate-with-weblate" title="Permalink to this headline"></a></h3>
+<p>You can find the client translation on our <a class="reference external" href="https://translate.lan2play.de/engage/netevent-client/">Weblate project</a></p>
 </section>
+<section id="translate-without-weblate">
+<h3>translate without weblate<a class="headerlink" href="#translate-without-weblate" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>The resource files are located in <cite>NetEvent/Client/Resources/</cite> .</p></li>
+<li><p>The <cite>App.resx</cite> is the english and default resource file and for every other language there either is a a <cite>App.lc.resx</cite> (lc = two letter language code. for example: de for german) file or you can create one.</p></li>
+</ul>
 </section>
-<section id="code-analysis">
-<h2>code analysis<a class="headerlink" href="#code-analysis" title="Permalink to this headline"></a></h2>
-<p>we do our code analysis on <a class="reference external" href="https://sonarcloud.io/project/overview?id=Lan2Play_NetEvent">sonarcloud</a></p>
 </section>
 </section>
 
@@ -116,8 +114,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../admin/reverseproxy.html" class="btn btn-neutral float-left" title="Example reverseproxy configs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="cicd.html" class="btn btn-neutral float-right" title="CI / CD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cicd.html" class="btn btn-neutral float-left" title="CI / CD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
