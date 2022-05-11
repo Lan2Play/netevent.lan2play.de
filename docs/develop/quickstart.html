@@ -90,20 +90,23 @@
 <ul class="simple">
 <li><p>Download and install .Net6 SDK <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet/6.0">https://dotnet.microsoft.com/download/dotnet/6.0</a></p></li>
 <li><p>Clone the repository <a class="reference external" href="https://github.com/Lan2Play/NetEvent.git">https://github.com/Lan2Play/NetEvent.git</a></p></li>
-<li><p>Install EntityFramework with <cite>dotnet tool install –global dotnet-ef</cite></p></li>
-<li><p>Switch into the <cite>NetEventNetEventServer</cite> folder and create the database with <cite>dotnet ef database update</cite></p></li>
+<li><p>Install EntityFramework with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install-ef</span></code> or <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">--global</span> <span class="pre">dotnet-ef</span></code></p></li>
 </ul>
 <section id="create-new-migrations-for-the-database">
 <h2>create new migrations for the database<a class="headerlink" href="#create-new-migrations-for-the-database" title="Permalink to this headline"></a></h2>
 <p>Switch into the repository and execute</p>
 <section id="with-make">
 <h3>with make<a class="headerlink" href="#with-make" title="Permalink to this headline"></a></h3>
-<p><cite>make migration name=MigrationName</cite></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make migration <span class="nv">name</span><span class="o">=</span>MigrationName
+</pre></div>
+</div>
 </section>
 <section id="without-make">
 <h3>without make<a class="headerlink" href="#without-make" title="Permalink to this headline"></a></h3>
-<p><cite>dotnet ef migrations add MigrationName –project NetEvent/Server –context PsqlApplicationDbContext –output-dir Migrations/Psql – –DBProvider psql</cite></p>
-<p><cite>dotnet ef migrations add MigrationName –project NetEvent/Server –context SqliteApplicationDbContext –output-dir Migrations/Sqlite</cite></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dotnet ef migrations add MigrationName --project NetEvent/Server --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql
+dotnet ef migrations add MigrationName --project NetEvent/Server --context SqliteApplicationDbContext --output-dir Migrations/Sqlite
+</pre></div>
+</div>
 </section>
 </section>
 <section id="code-analysis">

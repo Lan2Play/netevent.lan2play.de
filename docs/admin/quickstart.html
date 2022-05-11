@@ -100,17 +100,17 @@
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Download or clone this repository (or the docker-compose.yml and the .env.example)</p></li>
-<li><p>copy <cite>.env.example</cite> to <cite>.env</cite> and edit at least the <cite>DBUser</cite> and <cite>DBPassword</cite> values. If you want to use a different port than 5000/tcp, change <cite>APPPort</cite>. Attention: DBPort does not change the port of the postgres instance that is deployed by default in the compose file!</p></li>
-<li><p>run <cite>docker-compose up -d</cite></p></li>
-<li><p>visit your NetEvent installation with your browser, login with Admin and Test123.. and configure your instance</p></li>
+<li><p>copy <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> and edit at least the <code class="docutils literal notranslate"><span class="pre">DBUser</span></code> and <code class="docutils literal notranslate"><span class="pre">DBPassword</span></code> values. If you want to use a different port than 5000/tcp, change <code class="docutils literal notranslate"><span class="pre">APPPort</span></code>. Attention: DBPort does not change the port of the postgres instance that is deployed by default in the compose file!</p></li>
+<li><p>run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code></p></li>
+<li><p>visit your NetEvent installation with your browser, login with <code class="docutils literal notranslate"><span class="pre">Admin</span></code> and <code class="docutils literal notranslate"><span class="pre">Test123..</span></code> and configure your instance</p></li>
 </ul>
 </section>
 <section id="notes">
 <h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline"></a></h3>
 <ul class="simple">
-<li><p>This container is intended to be running behind any kind of reverse proxy and therfore it is started with http only. If you need help for this, take a look in the [example reverseproxy configs](admin/reverseproxy.html).</p></li>
+<li><p>This container is intended to be running behind any kind of reverse proxy and therfore it is started with http only. If you need help for this, take a look in the <a class="reference internal" href="reverseproxy.html"><span class="doc">Example reverseproxy configs</span></a>.</p></li>
 <li><p>You can find the container image on <a class="reference external" href="https://hub.docker.com/r/lan2play/netevent">Docker Hub</a></p></li>
-<li><p>You can find the <cite>Dockerfile</cite> inside the root of our github repository and build it yourself</p></li>
+<li><p>You can find the <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> inside the root of our github repository and build it yourself</p></li>
 </ul>
 </section>
 </section>
