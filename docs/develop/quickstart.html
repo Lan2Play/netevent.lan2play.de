@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developers quickstart guide &mdash; NetEvent 2.0 documentation</title>
+  <title>Developers start guide &mdash; NetEvent 2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CI / CD" href="cicd.html" />
+    <link rel="next" title="Database" href="database.html" />
     <link rel="prev" title="Example reverseproxy configs" href="../admin/reverseproxy.html" /> 
 </head>
 
@@ -37,7 +37,10 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Users guide</span></p>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Users guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user/start.html">Users documentation</a></li>
 </ul>
@@ -48,16 +51,25 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers guide</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developers quickstart guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-new-migrations-for-the-database">create new migrations for the database</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developers start guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#development-prerequisites">Development Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-netevent-locally">Run NetEvent locally</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#with-make">with make</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#without-make">without make</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#digging-deeper">Digging deeper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#code-analysis">code analysis</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="folderstructure.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="services.html">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">Permission system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authenticationsystem.html">Authentication system</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cicd.html">CI / CD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html">Release process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="translation.html">Translation / i18n</a></li>
 </ul>
 
@@ -75,7 +87,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Developers quickstart guide</li>
+      <li>Developers start guide</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/develop/quickstart.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,29 +97,81 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="developers-quickstart-guide">
-<h1>Developers quickstart guide<a class="headerlink" href="#developers-quickstart-guide" title="Permalink to this headline"></a></h1>
+  <section id="developers-start-guide">
+<h1>Developers start guide<a class="headerlink" href="#developers-start-guide" title="Permalink to this headline"></a></h1>
+<p>We are glad you want to help us on NetEvent!
+Some things you should think of before you start implementing new features or fixing bugs:</p>
+<ul class="simple">
+<li><p>Can another feature thats already implemented be expanded? yes? then go for that instead of Building complete new stuff!</p></li>
+<li><p>Does the addition / change might affect other usecases than your own? Build your changes with legacy support in mind!</p></li>
+<li><p>Try to follow the coding Style which is used within NetEvent, just look around in our code to see which case is handled mostly in which manner</p></li>
+<li><p>Why i shouldn’t join the NetEvent discord developer channel for discussion?</p></li>
+</ul>
+<p>To start a new code contribution please:</p>
+<ul class="simple">
+<li><p>open an issue to announce that you are working on a feature/change to get thoughts from the other developers and to prevent incompatibillities</p></li>
+<li><p>make your fork NetEvent (if you are not already a acknowledged developer who can create branches on our repository)</p></li>
+<li><p>make a new branch with the Name <code class="docutils literal notranslate"><span class="pre">feature/examplefeature</span></code></p></li>
+<li><p>as soon as you have code, please open a draft pull request.</p></li>
+</ul>
+<p>Before you want to change your draft pull request to a finalized pull request to main you should ask yourself some questions:</p>
+<ul class="simple">
+<li><p>Have i tried to update a running version from NetEvent with data to the one with my changes? Are the changes update proof?</p></li>
+<li><p>Have i implemented all strings with localised variables? See <a class="reference internal" href="translation.html"><span class="doc">Translation / i18n</span></a>!</p></li>
+<li><p>Have i implemented the users help features inside the client?</p></li>
+<li><p>Have i changed the admin documentation on the affected parts?</p></li>
+<li><p>Have i changed the developer documentation on the affected parts?</p></li>
+<li><p>Have i changed the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> on the affected parts?</p></li>
+<li><p>Have i written all ne needed tests for my code?</p></li>
+<li><p>Does my pull request have a good speaking name that represents my changes in the changelog?</p></li>
+<li><p>Do i have merged the current main branch into my feature branch?</p></li>
+</ul>
+<p>What will happen after you have converted to the finalized pull request:</p>
+<ul class="simple">
+<li><p>Someone of the core developer team assigns a specific label to your pull request, then our sonarcloud code analysis will run on your code. Afterwards please fix the things sonarcloud complains about.</p></li>
+<li><p>When your code passes the sonarcloud analysis, someone of the core developer team will review your code and will help you to find missing things or bugs.</p></li>
+<li><p>As soon as the review is done, your code will be merged to main and will get available for all users in the next release. Currently we dont have a fixed release cycle.</p></li>
+</ul>
+<section id="development-prerequisites">
+<h2>Development Prerequisites<a class="headerlink" href="#development-prerequisites" title="Permalink to this headline"></a></h2>
 <ul class="simple">
 <li><p>Download and install .Net6 SDK <a class="reference external" href="https://dotnet.microsoft.com/download/dotnet/6.0">https://dotnet.microsoft.com/download/dotnet/6.0</a></p></li>
-<li><p>Clone the repository <a class="reference external" href="https://github.com/Lan2Play/NetEvent.git">https://github.com/Lan2Play/NetEvent.git</a></p></li>
 <li><p>Install EntityFramework with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install-ef</span></code> or <code class="docutils literal notranslate"><span class="pre">dotnet</span> <span class="pre">tool</span> <span class="pre">install</span> <span class="pre">--global</span> <span class="pre">dotnet-ef</span></code></p></li>
+<li><p>Install your IDE of choise (Visual Studio or VSCode works best)</p></li>
 </ul>
-<section id="create-new-migrations-for-the-database">
-<h2>create new migrations for the database<a class="headerlink" href="#create-new-migrations-for-the-database" title="Permalink to this headline"></a></h2>
-<p>Switch into the repository and execute</p>
+</section>
+<section id="run-netevent-locally">
+<h2>Run NetEvent locally<a class="headerlink" href="#run-netevent-locally" title="Permalink to this headline"></a></h2>
 <section id="with-make">
 <h3>with make<a class="headerlink" href="#with-make" title="Permalink to this headline"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make migration <span class="nv">name</span><span class="o">=</span>MigrationName
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make dev
 </pre></div>
 </div>
 </section>
 <section id="without-make">
 <h3>without make<a class="headerlink" href="#without-make" title="Permalink to this headline"></a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dotnet ef migrations add MigrationName --project NetEvent/Server --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql
-dotnet ef migrations add MigrationName --project NetEvent/Server --context SqliteApplicationDbContext --output-dir Migrations/Sqlite
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dotnet run --project NetEvent/Server
 </pre></div>
 </div>
 </section>
+</section>
+<section id="digging-deeper">
+<h2>Digging deeper<a class="headerlink" href="#digging-deeper" title="Permalink to this headline"></a></h2>
+<p>If you want to know more about our development thoughts, you might want to take a look into:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="database.html"><span class="doc">Database</span></a></p></li>
+<li><p><a class="reference internal" href="folderstructure.html"><span class="doc">Folder structure</span></a></p></li>
+<li><p><a class="reference internal" href="models.html"><span class="doc">Models</span></a></p></li>
+<li><p><a class="reference internal" href="services.html"><span class="doc">Services</span></a></p></li>
+<li><p><a class="reference internal" href="authenticationsystem.html"><span class="doc">Authentication system</span></a></p></li>
+<li><p><a class="reference internal" href="permissions.html"><span class="doc">Permission system</span></a></p></li>
+<li><p><a class="reference internal" href="cicd.html"><span class="doc">CI / CD</span></a></p></li>
+<li><p><a class="reference internal" href="release.html"><span class="doc">Release process</span></a></p></li>
+</ul>
 </section>
 <section id="code-analysis">
 <h2>code analysis<a class="headerlink" href="#code-analysis" title="Permalink to this headline"></a></h2>
@@ -120,7 +184,7 @@ dotnet ef migrations add MigrationName --project NetEvent/Server --context Sqlit
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../admin/reverseproxy.html" class="btn btn-neutral float-left" title="Example reverseproxy configs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="cicd.html" class="btn btn-neutral float-right" title="CI / CD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="database.html" class="btn btn-neutral float-right" title="Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

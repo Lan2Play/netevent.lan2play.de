@@ -37,7 +37,10 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Users guide</span></p>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Users guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user/start.html">Users documentation</a></li>
 </ul>
@@ -45,7 +48,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Admins quickstart guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#running-netevent-with-docker">Running NetEvent with docker</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prerequirements">Prerequirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
 </ul>
@@ -56,8 +59,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../develop/quickstart.html">Developers quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/quickstart.html">Developers start guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/database.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/folderstructure.html">Folder structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/services.html">Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/permissions.html">Permission system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/authenticationsystem.html">Authentication system</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../develop/cicd.html">CI / CD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/release.html">Release process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../develop/translation.html">Translation / i18n</a></li>
 </ul>
 
@@ -89,8 +99,8 @@
 <h1>Admins quickstart guide<a class="headerlink" href="#admins-quickstart-guide" title="Permalink to this headline"></a></h1>
 <section id="running-netevent-with-docker">
 <h2>Running NetEvent with docker<a class="headerlink" href="#running-netevent-with-docker" title="Permalink to this headline"></a></h2>
-<section id="prerequirements">
-<h3>Prerequirements<a class="headerlink" href="#prerequirements" title="Permalink to this headline"></a></h3>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.docker.com/get-docker/">Docker</a></p></li>
 <li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Docker-compose</a></p></li>
@@ -100,7 +110,15 @@
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p>Download or clone this repository (or the docker-compose.yml and the .env.example)</p></li>
-<li><p>copy <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> and edit at least the <code class="docutils literal notranslate"><span class="pre">DBUser</span></code> and <code class="docutils literal notranslate"><span class="pre">DBPassword</span></code> values. If you want to use a different port than 5000/tcp, change <code class="docutils literal notranslate"><span class="pre">APPPort</span></code>. Attention: DBPort does not change the port of the postgres instance that is deployed by default in the compose file!</p></li>
+<li><p>copy <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> and edit at least the <code class="docutils literal notranslate"><span class="pre">DBUser</span></code> and <code class="docutils literal notranslate"><span class="pre">DBPassword</span></code> values. If you want to use a different port than 5000/tcp, change <code class="docutils literal notranslate"><span class="pre">APPPort</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>DBPort does not change the port of the postgres instance that is deployed by default in the compose file!</p>
+</div>
+</div></blockquote>
+<ul class="simple">
 <li><p>run <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code></p></li>
 <li><p>visit your NetEvent installation with your browser, login with <code class="docutils literal notranslate"><span class="pre">Admin</span></code> and <code class="docutils literal notranslate"><span class="pre">Test123..</span></code> and configure your instance</p></li>
 </ul>
