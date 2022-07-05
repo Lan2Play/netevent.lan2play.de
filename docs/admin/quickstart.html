@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -97,18 +98,18 @@
            <div itemprop="articleBody">
              
   <section id="admins-quickstart-guide">
-<h1>Admins quickstart guide<a class="headerlink" href="#admins-quickstart-guide" title="Permalink to this headline"></a></h1>
+<h1>Admins quickstart guide<a class="headerlink" href="#admins-quickstart-guide" title="Permalink to this heading"></a></h1>
 <section id="running-netevent-with-docker">
-<h2>Running NetEvent with docker<a class="headerlink" href="#running-netevent-with-docker" title="Permalink to this headline"></a></h2>
+<h2>Running NetEvent with docker<a class="headerlink" href="#running-netevent-with-docker" title="Permalink to this heading"></a></h2>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.docker.com/get-docker/">Docker</a></p></li>
 <li><p><a class="reference external" href="https://docs.docker.com/compose/install/">Docker-compose</a></p></li>
 </ul>
 </section>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Download or clone this repository (or the docker-compose.yml and the .env.example)</p></li>
 <li><p>copy <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> to <code class="docutils literal notranslate"><span class="pre">.env</span></code> and edit at least the <code class="docutils literal notranslate"><span class="pre">DBUser</span></code> and <code class="docutils literal notranslate"><span class="pre">DBPassword</span></code> values. If you want to use a different port than 5000/tcp, change <code class="docutils literal notranslate"><span class="pre">APPPort</span></code>.</p></li>
@@ -125,7 +126,7 @@
 </ul>
 </section>
 <section id="notes">
-<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this headline"></a></h3>
+<h3>Notes<a class="headerlink" href="#notes" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>This container is intended to be running behind any kind of reverse proxy and therfore it is started with http only. If you need help for this, take a look in the <a class="reference internal" href="reverseproxy.html"><span class="doc">Example reverseproxy configs</span></a>.</p></li>
 <li><p>You can find the container image on <a class="reference external" href="https://hub.docker.com/r/lan2play/netevent">Docker Hub</a></p></li>

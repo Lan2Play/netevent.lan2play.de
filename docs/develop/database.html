@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -96,19 +97,19 @@
            <div itemprop="articleBody">
              
   <section id="database">
-<h1>Database<a class="headerlink" href="#database" title="Permalink to this headline"></a></h1>
+<h1>Database<a class="headerlink" href="#database" title="Permalink to this heading"></a></h1>
 <p>Currently we use sqlite for development and our production container setup uses postgres. If you implement changes in the models, you have to create database migrations.</p>
 <section id="create-new-migrations-for-the-database">
-<h2>create new migrations for the database<a class="headerlink" href="#create-new-migrations-for-the-database" title="Permalink to this headline"></a></h2>
+<h2>create new migrations for the database<a class="headerlink" href="#create-new-migrations-for-the-database" title="Permalink to this heading"></a></h2>
 <p>Switch into the repository and execute</p>
 <section id="with-make">
-<h3>with make<a class="headerlink" href="#with-make" title="Permalink to this headline"></a></h3>
+<h3>with make<a class="headerlink" href="#with-make" title="Permalink to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make migration <span class="nv">name</span><span class="o">=</span>MigrationName
 </pre></div>
 </div>
 </section>
 <section id="without-make">
-<h3>without make<a class="headerlink" href="#without-make" title="Permalink to this headline"></a></h3>
+<h3>without make<a class="headerlink" href="#without-make" title="Permalink to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dotnet ef migrations add MigrationName --project NetEvent/Server --context PsqlApplicationDbContext --output-dir Migrations/Psql -- --DBProvider psql
 dotnet ef migrations add MigrationName --project NetEvent/Server --context SqliteApplicationDbContext --output-dir Migrations/Sqlite
 </pre></div>

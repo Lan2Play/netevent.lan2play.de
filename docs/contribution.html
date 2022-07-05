@@ -14,6 +14,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -106,12 +107,12 @@
            <div itemprop="articleBody">
              
   <section id="contribution-guide">
-<h1>Contribution Guide<a class="headerlink" href="#contribution-guide" title="Permalink to this headline"></a></h1>
+<h1>Contribution Guide<a class="headerlink" href="#contribution-guide" title="Permalink to this heading"></a></h1>
 <p>We are looking forward to every conbtirbution you possibly can bring in. If you want to contribute please read this document carefully.</p>
 <p>If you encounter serious errors while using NetEvent and you are not able to fix them, feel free to open issues on <a class="reference external" href="https://github.com/Lan2Play/NetEvent/issues">https://github.com/Lan2Play/NetEvent/issues</a> .</p>
 <p>If you plan to add a feature to NetEvent, please open an issue as well and draft a pull request as soon as you have done something, so no one has to do work that someone already did.</p>
 <section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
 <p>This documentation is written in restructured text and its build using sphinx and the read the docs theme. The source can be found in our main repository in the <code class="docutils literal notranslate"><span class="pre">Docs/</span></code> subfolder (<a class="reference external" href="https://github.com/Lan2Play/NetEvent/tree/main/Docs">https://github.com/Lan2Play/NetEvent/tree/main/Docs</a>).
 Feel free to pull request corrections or expansions of the documentation at any time!</p>
 <p>To build the documentation locally to the <code class="docutils literal notranslate"><span class="pre">Docs/build</span></code> subfolder you have two options:</p>
@@ -120,9 +121,9 @@ Feel free to pull request corrections or expansions of the documentation at any 
 <li><p>Building manually with the sphinx make file</p></li>
 </ul>
 <section id="building-with-docker-and-the-make-file">
-<h3>Building with docker and the make file<a class="headerlink" href="#building-with-docker-and-the-make-file" title="Permalink to this headline"></a></h3>
+<h3>Building with docker and the make file<a class="headerlink" href="#building-with-docker-and-the-make-file" title="Permalink to this heading"></a></h3>
 <section id="windows">
-<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"></a></h4>
+<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h4>
 <p>Prerequisites:</p>
 <ul class="simple">
 <li><p>Docker for Windows with wsl2 backend (<a class="reference external" href="https://docs.docker.com/docker-for-windows/wsl/">https://docs.docker.com/docker-for-windows/wsl/</a> Follow the prerequisites, the download and the install part!)</p></li>
@@ -136,7 +137,7 @@ Feel free to pull request corrections or expansions of the documentation at any 
 <p>To build the documentation just enter yor wsl2 distribution and follow the linux part below!</p>
 </section>
 <section id="linux">
-<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"></a></h4>
+<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h4>
 <p>Prerequisites:</p>
 <ul class="simple">
 <li><p>Docker (<a class="reference external" href="https://docs.docker.com/engine/install">https://docs.docker.com/engine/install</a>)</p></li>
@@ -149,9 +150,9 @@ Feel free to pull request corrections or expansions of the documentation at any 
 </section>
 </section>
 <section id="building-manually-with-the-sphinx-make-file">
-<h3>Building manually with the sphinx make file<a class="headerlink" href="#building-manually-with-the-sphinx-make-file" title="Permalink to this headline"></a></h3>
+<h3>Building manually with the sphinx make file<a class="headerlink" href="#building-manually-with-the-sphinx-make-file" title="Permalink to this heading"></a></h3>
 <section id="id1">
-<h4>Windows<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>Windows<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Prerequisites:</p>
 <ul class="simple">
 <li><p>python 3 (<a class="reference external" href="https://docs.python.org/3/using/index.html">https://docs.python.org/3/using/index.html</a>) with pip</p></li>
@@ -169,7 +170,7 @@ Feel free to pull request corrections or expansions of the documentation at any 
 </div>
 </section>
 <section id="id2">
-<h4>Linux<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>Linux<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <p>Prerequisites:</p>
 <ul class="simple">
 <li><p>python 3 (<a class="reference external" href="https://docs.python.org/3/using/index.html">https://docs.python.org/3/using/index.html</a>) with pip</p></li>
@@ -185,11 +186,11 @@ Feel free to pull request corrections or expansions of the documentation at any 
 </section>
 </section>
 <section id="translation-i18n">
-<h2>Translation / i18n<a class="headerlink" href="#translation-i18n" title="Permalink to this headline"></a></h2>
+<h2>Translation / i18n<a class="headerlink" href="#translation-i18n" title="Permalink to this heading"></a></h2>
 <p>If you want to help with the translation of NetEvent, please check out our <a class="reference internal" href="develop/translation.html"><span class="doc">Translation / i18n</span></a> section</p>
 </section>
 <section id="code">
-<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline"></a></h2>
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this heading"></a></h2>
 <p>If you want to get into coding for NetEvent, check out the <a class="reference internal" href="develop/quickstart.html"><span class="doc">Developers start guide</span></a>, there you can find an introduction into how to setup your development environment, how the contribution process looks like and some specific parts of NetEvent where we would love to see adaption for more usecases.</p>
 </section>
 </section>
